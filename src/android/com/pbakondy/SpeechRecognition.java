@@ -30,6 +30,7 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import android.widget.Toast;
 
 public class SpeechRecognition extends CordovaPlugin {
 
@@ -186,6 +187,7 @@ public class SpeechRecognition extends CordovaPlugin {
             @Override
             public void run() {
               try{
+                Toast.makeText(MainActivity.this, "Говорите после звукового сигнала",Toast.LENGTH_SHORT).show();
                  recognizer.startListening(intent);
               }catch (Exception e){
                   callbackContext.error(Integer.toString(56587));
