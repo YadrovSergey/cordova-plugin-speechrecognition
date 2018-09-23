@@ -187,7 +187,7 @@ public class SpeechRecognition extends CordovaPlugin {
             @Override
             public void run() {
               try{
-                Toast.makeText(MainActivity.this, "Говорите после звукового сигнала",Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, "Говорите после звукового сигнала",Toast.LENGTH_SHORT).show();
                  recognizer.startListening(intent);
               }catch (Exception e){
                   callbackContext.error(Integer.toString(56587));
